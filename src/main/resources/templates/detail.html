@@ -5,7 +5,8 @@
     <title>Vizitkovník</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet"
+          href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
@@ -16,19 +17,23 @@
         <div th:text="${detailVizitky.firma}" class="firma">Czechitas z. s.</div>
         <div class="udaje">
             <div class="adresa">
-                <div th:text="${detailVizitky.ulice}" >Václavské náměstí 837/11</div>
-                <div th:text="${detailVizitky.obecPsc}" ><span>11000</span> Praha 1</div>
+                <div th:text="${detailVizitky.ulice}">Václavské náměstí 837/11</div>
+                <div th:text="${detailVizitky.obecPsc}"><span>11000</span> Praha 1</div>
             </div>
             <div class="kontakty">
-                <div ><i class="las la-at"></i> <span th:if="${detailVizitky.email}!=null" th:text="${detailVizitky.email}">dita@czechitas.cs</span><em th:if="${detailVizitky.email} == null">neuvedeno</em></div>
-                <div><i class="las la-phone-alt"></i> <span  th:if="${detailVizitky.telefon}!=null" th:text="${detailVizitky.telefon}">+420 800123456</span><em th:if="${detailVizitky.telefon} == null">neuvedeno</em></div>
-                <div ><i class="las la-globe"></i> <span th:if="${detailVizitky.web}!=null" th:text="${detailVizitky.web}">www.czechitas.cz</span><em th:if="${detailVizitky.web} == null">neuvedeno</em></div>
+                <div th:if="${detailVizitky.email}!=null"><i class="las la-at"></i> <span
+                        th:text="${detailVizitky.email}">dita@czechitas.cs</span></div>
+                <div th:if="${detailVizitky.telefon}!=null"><i class="las la-phone-alt"></i> <span
+                        th:text="${detailVizitky.telefon}">+420 800123456</span></div>
+                <div th:if="${detailVizitky.web}!=null"><i class="las la-globe"></i> <span
+                        th:text="${detailVizitky.web}">www.czechitas.cz</span></div>
             </div>
         </div>
     </div>
 
     <div class="mapa">
-        <iframe style="border:none" th:src="@{https://frame.mapy.cz/(q=${detailVizitky.getCelaAdresa()})}" width="100%" height="100%" frameborder="0"></iframe>
+        <iframe style="border:none" th:src="@{https://frame.mapy.cz/(q=${detailVizitky.getCelaAdresa()})}" width="100%"
+                height="100%" frameborder="0"></iframe>
     </div>
 
 </div>

@@ -17,7 +17,7 @@ public class VizitkaController {
 
     public VizitkaController() {
         seznamVizitek = Arrays.asList(
-                new Vizitka("Kateřina Rajmanová", "FyzioBe", "Lesní 221", "Bučovice 685 01", "email", "123 456 789", null),
+                new Vizitka("Kateřina Rajmanová", "FyzioBe", "Lesní 221", "Bučovice 685 01", "email@email.com", "123 456 789", null),
                 new Vizitka("Petr Sova", "Sovinec", "U Červeného mlýna 14", "Brno 612 00", "soma@email.com", "543 345 876", "www.sova.com"),
                 new Vizitka("Jiří Anděl", "Spánek v oblacíh", "Nebeská 522", "Zlín 760 01", "andel@email.com", null, "www.andel.com"),
                 new Vizitka("Gabriela Horká", "Čistírna", "Spálená 669", "Dambořice 696 35", "cistepradlo@email.com", "234 890 787", "www.cistepradlo.com"),
